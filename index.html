@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sweetalert2.min.css">
     <title>Moneda</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -26,40 +27,58 @@
         </div>
     </section>
     <section class="contenido">
-        <form action="">
+        <form action="" method="post">
             <div class="valor">
                 <h2 class="cont-titulo">Apuesta</h3>
                     <label class="cont-label">Cuanto desea apostar</label>
-                    <input class="cont-input" type="text" name="valor" id="valor">
+                    <input class="cont-input" type="text" name="valor" id="valor" required>
             </div>
             <div class="seleccion">
                 <h2 class="cont-titulo">Seleccione Cara o Sello</h3>
-                    <div class="monedas">
-                        <!-- <div class="mon1">
+                    <!-- <div class="monedas">
+                        <div class="mon1"  id="monedas">
                             <img class="img-mon1" src="img/cara.png" alt="Cara">
                             <h3 class="mon-text">Cara</h3>
                             <input type="radio" class="opc" id="radio" value="1">
                         </div>
-                        <div class="mon1">
+                        <div class="mon1" >
                             <img class="img-mon1" src="img/sello.png" alt="Sello">
                             <h3 class="mon-text">Sello</h3>
                             <input type="radio" class="opc" id="radio" value="2">
-                        </div> -->
-                    
+                        </div>
+                        
+                    </div> -->
+                    <div>
+                        <div class="contador">
+                            <h4>Gano</h4>
+                            <div id="cont-gano"></div>
+                            <br>
+                            <h4>Perdio</h4>
+                            <div id="cont-perdio"></div>
+                        
+                        </div>
+                        
                         <select name="" id="opc">
-                            <option>Seleccione</option>
+                            <option >Seleccione</option>
                             <option value="1">Cara</option>
                             <option value="2">Sello</option>
                         </select>
                     </div>
+                    <div class="resultados" id="resultados">
+                    </div>
                     <div class="boton">
                         <input class="btn" type="button" value="Jugar" id="btn">
+                        <input class="btn" type="reset" value="Resetear" id="reset">
                     </div>
             </div>
         </form>
     </section>
 
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    <script src="sweetalert2.min.js"></script>
     <script src="code.js"></script>
+
 </body>
 
 </html>
